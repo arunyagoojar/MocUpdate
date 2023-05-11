@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mac OS</title>
+  <script src="script.js"></script>
+  <style>
+    html,body {
+      height: 100%;
+    }
+
+    body {
+      background-color: black;
+      color: white;
+      margin: 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+      .img{
+          display: flex;
+      justify-content: center;
+      align-items: center;
+          margin-top: 10vh;
+      }
+    .per div img{
+          width: 2.5cm;
+          height: auto;
+          filter: invert();
+            justify-content: center;
+      }
+    .progress-bar {
+        margin-top: 10vh;
+        width: 210px;
+        height: 7px;
+        border-radius: 4px;
+        background-color: rgba(255,255,255,0.2);
+        overflow: hidden;
+      }
+      .progress-indicator {
+        height: 100%;
+        background-color: whitesmoke;
+        animation: progress 500s linear infinite;
+      }
+      @keyframes progress {
+        0% { width: 0%; }
+        100% { width: 100%; }
+      }
+  </style>
+</head>
+
+<body>
+  <div class="per">
+    <div class="img">
+      <img width="250" height="250" src="https://img.icons8.com/ios-filled/250/000000/mac-os.png" alt="mac-os"/>
+      </div>
+    <div class="progress-bar">
+      <div class="progress-indicator"></div>
+    </div>
+  </div>
+</body>
+<script>
+      // Add event listener to the document object
+      document.addEventListener('keydown', (event) => {
+        // Check if the key pressed is F11
+        if (event.key === 'F11') {
+          // Request fullscreen mode
+          document.documentElement.requestFullscreen();
+        }
+      });
+    </script>
+</html>

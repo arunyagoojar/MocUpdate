@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chrome OS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+    html,body {
+        max-height:70vh;
+    }
+
+    body {
+font-family: 'Open Sans', sans-serif;
+        background-color: white;
+      color: white;
+      margin: 0px;
+    padding : 6rem 20rem;
+    }
+    .per div img{
+          width: 3rem;
+          height: auto;
+      }
+      .t1 h1{
+          color: rgba(0,0,0,0.75);
+          font-weight: normal;
+      }
+      .t1 p{
+          color: rgba(0,0,0,0.4);
+          font-weight: normal;
+          font-size: 15px;
+      }
+      .t2 p{
+          padding-top: 50px;
+          padding-right: 4px;
+          color: rgba(0,0,0,0.4);
+          font-weight: normal;
+          font-size: 15px;
+      }
+      .t2{
+          display: flex;
+      }
+    .progress-bar {
+        width: 98%;
+        height: 4px;
+        border-radius: 3px;
+        background-color: rgba(0,0,0,0.1);
+        overflow: hidden;
+      }
+      .progress-indicator {
+        height: 100%;
+        background-color: #4285F4;
+        animation: progress 800s linear infinite;
+      }
+      @keyframes progress {
+        0% { width: 0%; }
+        100% { width: 100%; }
+      }
+      .image{
+          display: flex;
+          justify-content: center;
+          margin-top: -60px;
+      }
+      .image img {
+          width:450px;
+      }
+  </style>
+</head>
+
+<body>
+  <div class="per">
+    <div class="img">
+<img width="96" height="96" src="https://img.icons8.com/color/96/google-logo.png" alt="google-logo"/>
+      </div>
+      <div class="t1">
+          <h1>Updating...</h1>
+          <p>Your Chromebook will restart after this update. Future software and security updates will install automatically.</p>
+      </div>
+    <div class="progress-bar">
+      <div class="progress-indicator"></div>
+    </div>
+      <div class="t2">
+          <p>Downloading: About</p>
+          <p id="count"></p>
+          <p>minutes left</p>
+      </div>
+  </div>
+    <div class="image"><img src="google.png"></div>
+</body>
+<script>
+      // Add event listener to the document object
+      document.addEventListener('keydown', (event) => {
+        // Check if the key pressed is F11
+        if (event.key === 'F11') {
+          // Request fullscreen mode
+          document.documentElement.requestFullscreen();
+        }
+      });
+    </script>
+    <script>
+    
+    const countElement = document.getElementById("count");
+
+    function updateCount(count) {
+      countElement.innerText = count;
+    }
+
+    async function countSlowly() {
+      for (let i = 13; i >= 1; i--) {
+        updateCount(i);
+        await new Promise((resolve) => setTimeout(resolve, 64000));
+      }
+    }
+
+    window.onload = countSlowly;
+    </script>
+</html>

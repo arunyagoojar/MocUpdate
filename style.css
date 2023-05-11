@@ -1,0 +1,53 @@
+@import url('https://fonts.cdnfonts.com/css/sf-mono');
+body{
+    background-color: #333;
+    font-family: 'SF Mono', sans-serif;
+    padding: 2% 5%;
+    margin: 0px;
+}
+h1{
+    text-align: center;
+    font-family: 'SF Mono', sans-serif;
+    font-size: 50px;
+    font-weight: 800;
+    color: white;
+    padding : 2rem;
+    margin: 2rem;
+    height: auto;
+}
+.os {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    height: 100% !important;
+    margin: 5rem 0rem;
+}
+.os>a>div{
+    width: 60vh;
+    height: 28.125vh;
+    border-radius: 8px !important;
+    transition: transform 0.5s ease-in-out , box-shadow 0.5s ease-in-out;
+}
+.os>a>div:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 35px rgba(255, 255, 255, 0.8);
+}
+.os a div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px !important;
+
+}
+.google img {
+    height: 15vh !important;
+    width: auto !important;
+}
+.google{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
