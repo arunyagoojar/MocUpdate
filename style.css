@@ -1,53 +1,103 @@
 @import url('https://fonts.cdnfonts.com/css/sf-mono');
-body{
-    background-color: #333;
-    font-family: 'SF Mono', sans-serif;
-    padding: 2% 5%;
-    margin: 0px;
-}
-h1{
-    text-align: center;
-    font-family: 'SF Mono', sans-serif;
-    font-size: 50px;
-    font-weight: 800;
-    color: white;
-    padding : 2rem;
-    margin: 2rem;
-    height: auto;
-}
-.os {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    align-items: center;
-    justify-content: center;
-    height: 100% !important;
-    margin: 5rem 0rem;
-}
-.os>a>div{
-    width: 60vh;
-    height: 28.125vh;
-    border-radius: 8px !important;
-    transition: transform 0.5s ease-in-out , box-shadow 0.5s ease-in-out;
-}
-.os>a>div:hover {
-    transform: scale(1.02);
-    box-shadow: 0px 0px 35px rgba(255, 255, 255, 0.8);
-}
-.os a div img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px !important;
 
+body {
+  background-color: #333;
+  font-family: 'SF Mono', sans-serif;
+  padding: 0% 5% 0% 5%;
+  margin: 0;
+  max-height: 100vh;
 }
-.google img {
-    height: 15vh !important;
-    width: auto !important;
+
+h1 {
+  text-align: center;
+  font-family: 'SF Mono', sans-serif;
+  font-size: 50px;
+  font-weight: 800;
+  color: white;
+  padding: 1rem 2rem;
+  margin: 2rem;
+  height: auto;
 }
-.google{
-    display: flex;
+
+.os {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
   align-items: center;
   justify-content: center;
+  height: 100% !important;
+  margin: 5rem 0rem 0rem 0rem;
+  padding-bottom: 7vh;
+}
+
+.os > a > div {
+  width: 60vh;
+  height: 28.125vh;
+  border-radius: 8px !important;
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.os > a > div:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.8);
+}
+
+.os a div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px !important;
+}
+
+.google img {
+  height: 15vh !important;
+  width: auto !important;
+}
+
+.google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .os > a > div {
+    width: 40vh;
+    height: 18.75vh;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .os > a > div {
+    width: 60vw;
+    height: 28.125vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 30px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+  }
+
+  .os > a > div {
+    width: 80vw;
+    height: 37.5vw;
+  }
+}
+footer{
+    display: flex;
+    justify-content: center;
+}
+footer>p>a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
 }

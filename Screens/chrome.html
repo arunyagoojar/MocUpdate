@@ -10,16 +10,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
   <style>
       @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
-    html,body {
-        max-height:100vh;
-    }
-
-    body {
-font-family: 'Open Sans', sans-serif;
+ body {
+     cursor: none;
+        font-family: 'Open Sans', sans-serif;
         background-color: white;
-      color: white;
-      margin: 0px;
-    padding : 10rem 20rem 0rem 20rem;
+        color: white;
+        margin: 0px;
+        padding : 0vh 20vw 0vh 20vw;
+        padding-top: 12vh;
+        padding-bottom: -12vh;
+        max-height: 100vh;
     }
     .per div img{
           width: 3rem;
@@ -110,7 +110,7 @@ font-family: 'Open Sans', sans-serif;
     }
 
     async function countSlowly() {
-      for (let i = 13; i >= 1; i--) {
+      for (let i = 23; i >= 6; i--) {
         updateCount(i);
         await new Promise((resolve) => setTimeout(resolve, 64000));
       }
@@ -118,4 +118,6 @@ font-family: 'Open Sans', sans-serif;
 
     window.onload = countSlowly;
     </script>
+        <script>document.addEventListener('contextmenu', event => event.preventDefault());
+</script>
 </html>
