@@ -238,7 +238,11 @@ body .main-article {
         grid-template-areas: "img1 img1""img1 img1""img2 img3""img4 img5";
     }
 }
-
+@media screen and (max-width: 580px){
+    body article header .lower-header .title {
+        word-break:normal;
+    }
+}
 @media screen and (max-width: 425px) {
     body {
         padding: 25px;
