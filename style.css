@@ -144,7 +144,9 @@ body .summary {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
+    padding: 0;
+    margin: -20px;
+    
 }
 
 body .summary .summary-item {
