@@ -1,0 +1,14 @@
+[
+  {
+    "title": "My First Blog Post",
+    "date": "2022-01-01",
+    "content": "<p>Welcome to my first blog post!</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec iaculis sem. Ut eget nisl malesuada, sagittis lacus eu, tristique velit. Donec at consequat mi. Morbi non tincidunt enim.</p><img src=\"https://images.unsplash.com/photo-1686467080200-31acc6627cc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\">",
+    "image": ""
+  },
+  {
+    "title": "My Second Blog Post",
+    "date": "2022-02-01",
+    "content": "<p>Welcome to my second blog post!</p><p>Integer vel rutrum mi. Nulla facilisi. Fusce vitae justo sit amet ante dapibus vulputate sed eget nibh. Suspendisse potenti. Nunc feugiat faucibus turpis.</p>",
+    "image": ""
+  }
+]
