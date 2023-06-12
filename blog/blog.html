@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Article Details</title>
+  <title id="head-title" ></title>
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -61,10 +61,12 @@
 
         // Populate the #blog-post section with the full blog post
         const blogPostTitle = document.querySelector('#post-title');
+         const blogPostHead = document.querySelector('#head-title');
         const blogPostDate = document.querySelector('#post-date');
         const blogPostContent = document.querySelector('#post-content');
-
+        
         blogPostTitle.textContent = title;
+        blogPostHead.textContent = title;
         blogPostDate.textContent = date;
         blogPostContent.innerHTML = content;
 
