@@ -1,3 +1,5 @@
+
+    /*<img src=\"https://images.unsplash.com/photo-1686467080200-31acc6627cc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\">*/
 * {
     box-sizing: border-box;
     cursor: none;
@@ -127,13 +129,15 @@ body .summary {
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
+    margin-bottom: 50px;
   padding: 30px 50px;
   border-radius: 16px;
-  box-shadow: 0 0 0 1px #f2f2f2;
+  box-shadow: 0 0 0 1px black;
 }
 body .summary .summary-item {
-  width: 100%;
-  padding-right: 20px;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
 }
 body .summary .summary-item .item-title {
   color: #999;
@@ -142,21 +146,73 @@ body .summary .summary-item .item-text {
   margin-top: 12px;
   font-size: 1.5rem;
 }
+
+body .summary .summary-item a {
+    margin-top: 12px;
+    font-size: 1.5rem;
+    color: inherit;
+    text-decoration: none;
+    --s: 0.1em;
+    /* the thickness of the line */
+    --c: #f1faee;
+    /* the color */
+
+    color: #457b9d;
+    padding-bottom: var(--s);
+    background:
+        linear-gradient(90deg, var(--c) 50%, #000 0) calc(100% - var(--_p, 0%))/200% 100%,
+        linear-gradient(var(--c) 0 0) 0% 100%/var(--_p, 0%) var(--s) no-repeat;
+    -webkit-background-clip: text, padding-box;
+    background-clip: text, padding-box;
+    transition: 0.5s;
+}
+
+body .summary .summary-item a:hover {
+    --_p: 100%
+}
 body .main-article {
   width: 100%;
   margin-top: 50px;
   padding: 20px;
   line-height: 1.75;
 }
-body .main-article h4 {
-  margin-top: 60px;
-  margin-bottom: 20px;
-  font-size: 1.25em;
-}
 body .main-article p {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   color: #777;
   font-size: 1.125em;
+}
+body .main-article p b {
+  margin-bottom: 5px;
+  color: black;
+  font-size: 1.125em;
+    font-weight: 600;
+}
+body .main-article h1 {
+  margin: 1em 0 1em 0;
+  color: black;
+  font-size: 2em;
+    font-weight: 600;
+}
+body .main-article h2 {
+  margin: 1em 0 1em 0;
+  color: black;
+  font-size: 1.8em;
+    font-weight: 400;
+}
+body .main-article h3 {
+  margin: 1em 0 1em 0;
+  color: black;
+  font-size: 1.6em;
+}
+body .main-article h4 {
+  margin: 1em 0 1em 0;
+  color: black;
+  font-size: 1.4em;
+}
+body .main-article h5 {
+  margin: 1em 0 1em 0;
+  color: black;
+  font-size: 1.2em;
 }
 body .main-article blockquote {
   position: relative;
@@ -181,10 +237,15 @@ body .main-article blockquote::after {
   transform: scale(2) rotate(180deg);
   opacity: 0.1;
 }
+body .main-article div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 body .main-article div img {
-    margin: 40px 10%;
-  min-height: 200px;
-  width: 80%;
+    margin: 30px 12.5% ;
+  height: auto;
+    width:75%;
   background-color: #eee;
   background-position: center;
   background-repeat: no-repeat;

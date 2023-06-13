@@ -172,7 +172,8 @@ body .summary a:hover {
 }
 
 body .summary p {
-    font-size: 0.8rem;
+    padding-right: 30px;
+    font-size: 1.05rem;
     color: inherit;
     text-decoration: none;
     --s: 0.1em;
