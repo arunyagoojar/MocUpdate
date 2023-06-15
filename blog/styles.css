@@ -113,6 +113,7 @@ body article header .lower-header .tags-container span {
   font-size: 0.875rem;
 }
 body article header .lower-header .title {
+word-break: normal !important;
   margin: 20px 0;
   font-size: 3rem;
   font-weight: bold;
@@ -300,6 +301,10 @@ body .main-article .gallery .mask-off img {
 }
 
 @media screen and (max-width: 1024px) {
+    body .main-article div img {
+        margin: 30px 0 ;
+    width: auto;
+    height: auto;}
   body {
     padding: 50px;
   }
@@ -308,6 +313,10 @@ body .main-article .gallery .mask-off img {
   }
 }
 @media screen and (max-width: 768px) {
+    body .main-article div img {
+        margin: 30px 0 ;
+    width: auto;
+    height: auto;}
   body article header .lower-header .title {
     word-break: break-all;
   }
@@ -322,6 +331,10 @@ body .main-article .gallery .mask-off img {
   }
 }
 @media screen and (max-width: 425px) {
+    body .main-article div img {
+        margin: 30px 0 ;
+    width: auto;
+    height: auto;}
   body {
     padding: 25px;
   }
