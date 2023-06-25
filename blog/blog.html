@@ -67,27 +67,26 @@ box-shadow: 0 0 0 1px #f2f2f2; padding: 30px 50px;margin-top: 30px;">
     <!-- partial -->
     <script src="script.js"></script>
     <script>
-        // Extract the query parameters from the URL
         const params = new URLSearchParams(window.location.search);
         const title = params.get('title');
         const date = params.get('date');
-        const content = params.get('content');
 
-        // Populate the #blog-post section with the full blog post
-        const blogPostTitle = document.querySelector('#post-title');
-        const blogPostHead = document.querySelector('#head-title');
-        const blogPostDate = document.querySelector('#post-date');
-        const blogPostContent = document.querySelector('#post-content');
+        // Fetch the blog content dynamically
+        fetch('data.json') // Replace with the path to your JSON file
+            .then(response => response.json())
+            .then(data => {
+                const blogPost = data.find(post => post.title === title);
+                if (blogPost) {
+                    const { content } = blogPost;
+                    const blogPostContent = document.querySelector('#post-content');
+                    blogPostContent.innerHTML = content;
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching blog content:', error);
+            });
 
-        blogPostTitle.textContent = title;
-        blogPostHead.textContent = title;
-        blogPostDate.textContent = date;
-        blogPostContent.innerHTML = content;
-
-        // Update the URL with just the title and date parameters
-        const url = window.location.origin + window.location.pathname + `?title=${encodeURIComponent(title)}&date=${encodeURIComponent(date)}`;
-        history.pushState(null, null, url);
-
+        // Rest of the script...
     </script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js'></script>
     <script src="./script.js"></script>
